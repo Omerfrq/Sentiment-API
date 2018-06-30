@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.7.10, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Sentiment Demo</title>
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/mbr-additional.css" type="text/css">
+
+
+
+</head>
+<body>
+  <section class="header11 cid-qWsHR4pAbT mbr-fullscreen" id="header11-3">
+
+    <!-- Block parameters controls (Blue "Gear" panel) -->
+
+    <!-- End block parameters -->
+
+
+    <div class="container align-left">
+        <div class="media-container-column mbr-white col-md-12">
+            <h1 class="mbr-section-subtitle py-2 mbr-fonts-style display-1">
+                Sentiment API
+            </h1>
+
+            <form action="{{ url_for('index_page') }}" method=post>
+                <dl>
+                    <dt class="mbr-section-subtitle py-3 mbr-fonts-style display-5">Enter or paste your comment: <br>
+                    <dd><textarea name=text rows=8 cols=40 style="font-size: 25pt">{{ text }}</textarea>
+                    <dd><input type=submit value="Rate" class="btn btn-md btn-primary display-4">
+                </dl>
+            </form>
+
+           <h5 class="mbr-section-subtitle py-1 mbr-fonts-style display-2">  <br>Sentiment prediction:<br>
+            </h5>
+            <h3 class="mbr-section-subtitle py-3 mbr-fonts-style display-1">
+                    {{ prediction_message }}
+            </h3>
+        </div>
+    </div>
+
+
+</body>
+</html>
